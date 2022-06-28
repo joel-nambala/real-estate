@@ -154,6 +154,17 @@ body {
   display: none;
 }
 
+.joel-text {
+  font-size: 1.8rem;
+  margin-top: 2.4rem;
+}
+
+.joel-text a:link,
+.joel-text a:visited {
+  color: #087f5b;
+  text-decoration: none;
+}
+
 /***********************/
 /* HEADER SECTION */
 /***********************/
