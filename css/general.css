@@ -1,0 +1,155 @@
+/* 
+FONT SIZES
+10px 12px 14px 16px 18px 20px 24px 30px 36px 44px 52px 62px 74px 86px 98px 120px
+
+WHITE SPACES
+8px 12px 16px 24px 32px 48px 64px 80px 96px 128px
+
+COLORS 
+MAIN COLOR: #087f5b
+GRAY COLOR: #495057
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #495057;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 4.8rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid--3-cols {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.heading-primary {
+  font-size: 4.6rem;
+  letter-spacing: -1px;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 3.6rem;
+  margin-bottom: 5.2rem;
+}
+
+.subheading {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 1.8rem;
+  color: #087f5b;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* LISTS */
+.list {
+  list-style: none;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #087f5b;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #218c6b;
+}
+
+.btn--fill {
+  text-transform: uppercase;
+  border-radius: 100px;
+}
+
+.btn--property {
+  width: 100%;
+  margin-top: 1.6rem;
+}
+
+.btn--cta {
+  border-radius: 100px;
+}
+
+.btn--top {
+  padding: 1.6rem 1.8rem !important;
+  position: fixed;
+  bottom: 6rem;
+  right: 5rem;
+}
+
+.btn--top.hide {
+  display: none;
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #bbb;
+}
+
+.sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 99;
+  width: 100%;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.4);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.nav-menu {
+  border: none;
+  background-color: transparent;
+  font-size: 2.4rem;
+  cursor: pointer;
+  position: absolute;
+  top: 4rem;
+  right: 5rem;
+  display: none;
+}
