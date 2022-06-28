@@ -172,6 +172,31 @@
   color: white;
   justify-self: center;
   align-self: end;
+
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.card-links a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.card-links a i {
+  color: #fff;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+
+.card-links a i:hover {
+  background-color: #fff;
+  color: #087f5b;
 }
 
 .card-details {
@@ -383,4 +408,9 @@
 
 .copy-text {
   font-size: 1.4rem;
+}
+
+.footer-links a:link,
+.footer-links a:visited {
+  font-size: 1.8rem;
 }
