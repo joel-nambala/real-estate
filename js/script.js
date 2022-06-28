@@ -9,10 +9,24 @@ const scrollLinks = document.querySelectorAll('.link');
 const menuToggle = document.querySelectorAll('.menu');
 const links = document.querySelectorAll('a');
 
+const btnOpenModal = document.querySelector('.btn--cta');
+const modalWindow = document.querySelector('.book');
+const btnCloseModal = document.querySelector('.btn--close');
+
+const btnCta = document.querySelector('.btn--form');
+const inputUsername = document.querySelector('.input-username');
+const inputEmail = document.querySelector('.input-email');
+const inputPassword = document.querySelector('.input-password');
+const inputSelect = document.querySelector('.input-select');
+
 const linksContainer = document.querySelector('.links-container');
 
 const btnTop = document.querySelector('.btn--top');
 const copyYear = document.querySelector('.year');
+
+/////////////////////////////////////////
+// State variables
+const clients = [];
 
 /////////////////////////////////////
 // Copyright year
@@ -35,7 +49,8 @@ const fixedNav = function () {
   const scrollHeight = window.scrollY;
 
   // Add the sticky navigation bar
-  if (scrollHeight > navHeight) navigation.classList.add('sticky');
+  if (scrollHeight > headerHeight - navHeight)
+    navigation.classList.add('sticky');
   else navigation.classList.remove('sticky');
 
   if (headerHeight < scrollHeight) btnTop.classList.remove('hide');
@@ -93,6 +108,61 @@ links.forEach(function (link) {
   link.addEventListener('click', function (e) {
     e.preventDefault();
     const hash = link.getAttribute('href');
-    if (hash === '#') window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (hash === '#') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      linksContainer.style.height = 0;
+    }
   });
 });
+
+/////////////////////////////////////////
+// Open and close modal
+const openModal = function (e) {
+  e.preventDefault();
+  modalWindow.classList.add('show');
+};
+
+const closeModal = function (e) {
+  // e.preventDefault();
+  modalWindow.classList.remove('show');
+};
+
+btnOpenModal.addEventListener('click', openModal);
+btnCloseModal.addEventListener('click', closeModal);
+
+/////////////////////////////////////////////////////////////////
+// Capture user data
+const userData = function (e) {
+  e.preventDefault();
+
+  if (
+    inputUsername.value === '' &&
+    inputEmail.value === '' &&
+    inputPassword.value === '' &&
+    inputSelect.value === ''
+  )
+    return;
+
+  const client = {
+    name: inputUsername.value,
+    email: inputEmail.value,
+    pin: +inputPassword.value,
+    city: inputSelect.value,
+  };
+
+  clients.push(client);
+  console.log(clients);
+
+  inputUsername.value =
+    inputEmail.value =
+    inputPassword.value =
+    inputSelect.value =
+      '';
+
+  inputUsername.focus();
+  localStorage.setItem('clients', JSON.stringify(clients));
+  closeModal();
+  localStorage.clear();
+};
+
+btnCta.addEventListener('click', userData);
