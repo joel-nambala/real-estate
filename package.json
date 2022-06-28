@@ -6,7 +6,7 @@
   "scripts": {
     "concat": "concat -o css/style.concat.css css/general.css css/style.css css/queries.css",
     "compress": "node-sass css/style.concat.css css/style.min.css --output-style compressed",
-    "build": "npm-run-all concat compress"
+    "publish": "npm-run-all concat compress"
   },
   "author": "joel nambala",
   "license": "ISC",
