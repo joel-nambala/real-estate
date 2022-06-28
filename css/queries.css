@@ -149,6 +149,14 @@
   .card {
     width: 100%;
   }
+
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+  }
 }
 
 @media (min-width: 38.1em) {
