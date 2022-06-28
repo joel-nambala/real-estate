@@ -160,9 +160,9 @@ const userData = function (e) {
       '';
 
   inputUsername.focus();
-  localStorage.setItem('clients', JSON.stringify(clients));
-  closeModal();
-  localStorage.clear();
+  // localStorage.setItem('clients', JSON.stringify(clients));
+  // closeModal();
+  // localStorage.clear();
 };
 
 btnCta.addEventListener('click', userData);
