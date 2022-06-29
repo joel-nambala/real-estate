@@ -156,7 +156,8 @@ body {
 
 .joel-text {
   font-size: 1.8rem;
-  margin-top: 2.4rem;
+  margin-top: 1.4rem;
+  margin-bottom: 1.8rem;
 }
 
 .joel-text a:link,
@@ -646,7 +647,7 @@ body {
   top: 2rem;
   right: 2rem;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
 }
 
 .show {
