@@ -708,6 +708,10 @@ body {
     flex-direction: column;
     gap: 2.4rem;
   }
+
+  .book-form {
+    width: 60%;
+  }
 }
 
 @media (max-width: 38em) {
@@ -813,6 +817,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1.4rem;
+  }
+
+  .book-form {
+    width: 90%;
   }
 }
 
